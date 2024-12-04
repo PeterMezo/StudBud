@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="card-body">
                     <h5 class="card-title">Note ${index + 1}</h5>
                     <p class="card-text">${note}</p>
+                    <a href="#" class="btn btn-primary">Open Notes</a>
                 </div>`;
             notesContainer.appendChild(noteCard);
         });
