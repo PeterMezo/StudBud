@@ -80,30 +80,29 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Editable functions
-    window.editTitle = (index) => {
-        const newDescription = prompt("Enter the new title:", notes[index].title);
-        if (newTitle) {
-            notes[index].description = newDescription;
-            updateNotes();
-        }
-    };
-    
-    window.editNoteType = (index) => {
-        const newType = prompt("Enter the new type of the note:", notes[index].type);
-        if (newType) {
-            notes[index].type = newType;
-            updateNotes();
-        }
-    };
+   window.editTitle = (index) => {
+    const newTitle = prompt("Enter the new title:", notes[index].title);
+    if (newTitle) {
+        notes[index].title = newTitle;
+        updateNotes();
+    }
+};
 
-    window.editNoteDescription = (index) => {
-        const newDescription = prompt("Enter the new description of the note:", notes[index].description);
-        if (newDescription) {
-            notes[index].description = newDescription;
-            updateNotes();
-        }
-    };
+window.editNoteType = (index) => {
+    const newType = prompt("Enter the new type of the note:", notes[index].type);
+    if (newType) {
+        notes[index].type = newType;
+        updateNotes();
+    }
+};
 
+window.editNoteDescription = (index) => {
+    const newDescription = prompt("Enter the new description of the note:", notes[index].description);
+    if (newDescription) {
+        notes[index].description = newDescription;
+        updateNotes();
+    }
+};
     // Initial render
     updateNotes();
 });
