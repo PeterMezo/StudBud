@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
             courseCard.innerHTML = `
                 <div class="card-body">
                     <h5 class="card-title">${course.courseName}</h5>
-                    <a href="course.html?course={$course.courseName}" class="btn btn-primary">Open Notes</a>
+                    <a href="course.html?course=${course.courseName}" class="btn btn-primary">Open Notes</a>
                 </div>`;
             coursesContainer.appendChild(courseCard);
         });
