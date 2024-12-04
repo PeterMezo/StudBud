@@ -1,11 +1,11 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('headerLoaded', () => {
     const courseList = document.getElementById('course-list');
     const coursesContainer = document.getElementById('courses-container');
     const addCourseBtn = document.getElementById('add-course-btn');
 
     let courses = [
-     { courseName: "Example"}
-]; // Stores course names
+        { courseName: "Example" }
+    ]; // Stores course names
 
     // Function to update UI with courses
     const updateCourseList = () => {
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     addCourseBtn.addEventListener('click', () => {
         const courseNameGet = prompt('Enter the course name:');
         if (courseNameGet) {
-            courses.push({courseName: courseNameGet});
+            courses.push({ courseName: courseNameGet });
             updateCourseList();
         }
     });
