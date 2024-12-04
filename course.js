@@ -19,23 +19,39 @@ document.addEventListener('DOMContentLoaded', () => {
             const noteCard = document.createElement('div');
             noteCard.className = 'card my-3';
             noteCard.innerHTML = `
-                <div class="card-body">
-                    <div class="mb-2">
-                        <h5 class="card-title">${note.title}</h5>
-                    </div>
-                    <div class="d-flex align-items-center mb-2">
-                        <p class="mb-0 me-3" id="note-type-${index}">${note.type}</p>
-                        <button class="btn btn-sm btn-secondary" onclick="editNoteType(${index})">Edit Type</button>
-                    </div>
-                    <div class="d-flex align-items-center mb-2">
-                        <p class="mb-0 me-3" id="note-description-${index}">${note.description}</p>
-                        <button class="btn btn-sm btn-secondary" onclick="editNoteDescription(${index})">Edit Description</button>
-                    </div>
-                    <div class="mb-2">
-                        <p class="mb-0"><strong>Course:</strong> ${note.course}</p>
-                    </div>
-                    <button class="btn btn-primary">Open</button>
-                </div>`;
+                <div class="card my-3">
+    <div class="card-body">
+        <div class="row align-items-center">
+            <!-- Title -->
+            <div class="col">
+                <h5 class="card-title">Note Title</h5>
+                <button class="btn btn-sm btn-secondary">Edit Title</button>
+            </div>
+
+            <!-- Note Type -->
+            <div class="col d-flex align-items-center">
+                <p class="mb-0 me-2">Lecture</p>
+                <button class="btn btn-sm btn-secondary">Edit Type</button>
+            </div>
+
+            <!-- Short Description -->
+            <div class="col d-flex align-items-center">
+                <p class="mb-0 me-2">Short description</p>
+                <button class="btn btn-sm btn-secondary">Edit Description</button>
+            </div>
+
+            <!-- Course Name -->
+            <div class="col">
+                <p class="mb-0"><strong>Course:</strong> Course Name</p>
+            </div>
+
+            <!-- Open Button -->
+            <div class="col">
+                <button class="btn btn-primary">Open</button>
+            </div>
+        </div>
+    </div>
+</div>`;
             notesContainer.appendChild(noteCard);
         });
     };
@@ -53,6 +69,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Editable functions
+    window.editTitle = (index) => {
+        const newDescription = prompt("Enter the new title:", notes[index].title);
+        if (newTitle) {
+            notes[index].description = newDescription;
+            updateNotes();
+        }
+    };
+    
     window.editNoteType = (index) => {
         const newType = prompt("Enter the new type of the note:", notes[index].type);
         if (newType) {
