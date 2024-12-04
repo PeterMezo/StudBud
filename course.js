@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const params = new URLSearchParams(window.location.search);
     const courseIndex = params.get('course');
-    const courseName = `Course ${courseIndex}`; // Replace with actual course name from storage
+    const courseName = `${courseIndex}`; // Replace with actual course name from storage
     courseTitle.innerText = courseName;
 
     let notes = [
