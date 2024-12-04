@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         courses.forEach((course, index) => {
             // Navbar dropdown
             const courseItem = document.createElement('li');
-            courseItem.innerHTML = `<a class="dropdown-item" href="#" data-index="${index}">${course}</a>`;
+            courseItem.innerHTML = `<a class="dropdown-item" href="#" data-index="${index}">${course.courseName}</a>`;
             courseList.appendChild(courseItem);
 
             // Main page course cards
@@ -32,9 +32,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Add new course
     addCourseBtn.addEventListener('click', () => {
-        const courseName = prompt('Enter the course name:');
-        if (courseName) {
-            courses.push({courseName: courseName});
+        const courseNameIn = prompt('Enter the course name:');
+        if (courseNameIn) {
+            courses.push({courseName: courseNameIn});
             updateCourseList();
         }
     });
