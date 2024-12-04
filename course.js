@@ -21,13 +21,17 @@ document.addEventListener('DOMContentLoaded', () => {
         noteCard.className = 'card my-3';
         noteCard.innerHTML = `
             <div class="card-body">
-                <div class="row align-items-center">
-                    <!-- Title -->
-                    <div class="col">
-                        <h5 class="card-title">${note.title}</h5>
+                <div class="d-flex align-items-center justify-content-between">
+                    <!-- Title and Edit Title Button -->
+                    <div class="d-flex align-items-center">
+                        <h5 class="card-title mb-0 me-3">${note.title}</h5>
                         <button class="btn btn-sm btn-secondary edit-title-btn">Edit Title</button>
                     </div>
 
+                    <!-- Open Button -->
+                    <button class="btn btn-primary open-btn">Open</button>
+                </div>
+                <div class="row align-items-center mt-3">
                     <!-- Note Type -->
                     <div class="col d-flex align-items-center">
                         <p class="mb-0 me-2">${note.type}</p>
@@ -43,11 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     <!-- Course Name -->
                     <div class="col">
                         <p class="mb-0"><strong>Course:</strong> ${note.course}</p>
-                    </div>
-
-                    <!-- Open Button -->
-                    <div class="col">
-                        <button class="btn btn-primary open-btn">Open</button>
                     </div>
                 </div>
             </div>
