@@ -19,6 +19,28 @@
         </div>
     </div>
 
+<div class="modal fade" id="noteEditorModal" tabindex="-1" aria-labelledby="noteEditorLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="noteEditorLabel">Note Editor</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Rich Text Editor -->
+                <div id="editor" contenteditable="true" class="border p-3" style="min-height: 200px;"></div>
+                
+                <!-- Button to Add a Block -->
+                <button class="btn btn-secondary mt-3" id="add-block-btn">Add Block</button>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="save-note-btn">Save Note</button>
+            </div>
+        </div>
+    </div>
+</div>
+
     <script src="course.js"></script>
 </body>
 </html>
