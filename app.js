@@ -3,7 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const coursesContainer = document.getElementById('courses-container');
     const addCourseBtn = document.getElementById('add-course-btn');
 
-    let courses = []; // Stores course names
+    let courses = [
+     { courseName: "Example"}
+]; // Stores course names
 
     // Function to update UI with courses
     const updateCourseList = () => {
@@ -21,8 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
             courseCard.className = 'card my-3';
             courseCard.innerHTML = `
                 <div class="card-body">
-                    <h5 class="card-title">${course}</h5>
-                    <a href="course.html?course=${index}" class="btn btn-primary">Open Notes</a>
+                    <h5 class="card-title">${course.courseName}</h5>
+                    <a href="course.html?course={$course.courseName}" class="btn btn-primary">Open Notes</a>
                 </div>`;
             coursesContainer.appendChild(courseCard);
         });
@@ -32,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     addCourseBtn.addEventListener('click', () => {
         const courseName = prompt('Enter the course name:');
         if (courseName) {
-            courses.push(courseName);
+            courses.push({courseName: courseName});
             updateCourseList();
         }
     });
