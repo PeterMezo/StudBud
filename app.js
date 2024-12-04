@@ -32,9 +32,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Add new course
     addCourseBtn.addEventListener('click', () => {
-        const courseNameIn = prompt('Enter the course name:');
-        if (courseNameIn) {
-            courses.push({courseName: courseNameIn});
+        const courseNameGet = prompt('Enter the course name:');
+        if (courseNameGet) {
+            courses.push({courseName: courseNameGet});
             updateCourseList();
         }
     });
