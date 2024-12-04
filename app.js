@@ -1,4 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header-placeholder').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading header:', error));
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
     const courseList = document.getElementById('course-list');
     const coursesContainer = document.getElementById('courses-container');
     const addCourseBtn = document.getElementById('add-course-btn');
