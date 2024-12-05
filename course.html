@@ -28,11 +28,10 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <!-- Rich Text Editor -->
-                <div id="editor" contenteditable="true" class="border p-3" style="min-height: 200px;"></div>
-                
-                <!-- Button to Add a Block -->
-                <button class="btn btn-secondary mt-3" id="add-block-btn">Add Block</button>
+                <!-- Container for Blocks -->
+                <div id="block-container" class="border p-3" style="min-height: 200px;"></div>
+                <!-- Floating Action Button for Quiz Creation -->
+                <button id="add-question-btn" class="btn btn-primary" style="display: none; position: fixed; bottom: 20px; right: 20px; z-index: 1050;">+</button>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
